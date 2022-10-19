@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "name": "<site-name>",
+    "namespace": "system",
+    "labels": {},
+    "annotations": {},
+    "disable": false
+  },
+  "spec": {
+    "no_local_access": {},
+    "global_access_enable": {},
+    "use_default_psp": {},
+    "use_default_cluster_roles": {},
+    "use_default_cluster_role_bindings": {},
+    "cluster_wide_app_list": {
+      "cluster_wide_apps": [
+        {
+          "argo_cd": {
+            "local_domain": {
+              "local_domain": "localdomain.local",
+              "default_port": {},
+              "password": {
+                "blindfold_secret_info": {
+                  "location": "<removed>"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "no_insecure_registries": {},
+    "cluster_scoped_access_deny": {}
+  }
+}

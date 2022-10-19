@@ -1,0 +1,9 @@
+{
+  "token": "<token>",
+  "cluster_name": "<site-name>",
+  "hostname": "<node-name>",
+  "latitude": "<latitude>",
+  "longitude": "<longitude>",
+  "certified_hardware": "kvm-volstack-combo",
+  "primary_outside_nic": "eth0"
+}

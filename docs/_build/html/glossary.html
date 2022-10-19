@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; Infrastructure As Code</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-toolbox-code.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/f5.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/f5-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/CoveoFullSearch.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/21fb8a09c3.css" type="text/css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+
+  <div class="titlebar">
+              <!-- custom breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html" class=breadcrumbanchor>Infrastructure</a>
+
+        </div>
+
+        <!-- end custom breadcrumb -->
+      
+              <!-- custom navigation -->
+
+        <div class="navigation-container">
+
+    
+
+        </div>
+        <!-- end custom navigation -->
+      
+  </div>
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+<!--
+      
+<div id="searchbox" role="search">
+  <form class="search" action="search.html" method="get">
+    <input type="text" class="search" name="q" placeholder=" Search..." />
+    <button type="submit" class="btn btn-info navbar-btn"><i class="fa fa-search"></i></button>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+      
+-->
+      <nav class="nav-sidebartoc">
+        <hr>
+        <span class="nav-sidebartoc">
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="virtual-k8s.html">Managed Namespace</a></li>
+</ul>
+
+        </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <!--<button type="button" id="export-pdf" class="btn btn-link right">PDF</button>-->
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <dl class="glossary simple">
+<dt id="term-workload">workload</dt><dd><p>Workload is used to configure and deploy a workload in Virtual Kubernetes. A workload may be part of an application. Workload encapsulates all the operational characteristics of Kubernetes workload, storage, and network objects (deployments, statefulsets, jobs, persistent volume claims, configmaps, secrets, and services) configuration, as well as configuration related to where the workload is deployed and how it is advertised using L7 or L4 load balancers. A workload can be one of simple service, service, stateful service or job. Services are long running workloads like web servers, databases, etc. and jobs are run to completion workloads. Services and jobs can be deployed on regional edges or customer sites. Services can be exposed in-cluster or on Internet by L7 or L4 load balancer or on sites using an advertise policy.</p>
+</dd>
+<dt id="term-registry">registry</dt><dd><p>A container registry object is used to configure a private network location from which the application container images are fetched.</p>
+</dd>
+<dt id="term-vk8s">vk8s</dt><dd><p>What is VK8s</p>
+</dd>
+<dt id="term-tenant">tenant</dt><dd><p>Tenant is an entity that is the owner of a given set of configuration and infrastructure. Tenant is the owner of all configuration objects that a user with given tenant-id has created. Tenant is fundamental concept of isolation, and a tenant cannot access any objects or infrastructure of other tenants.</p>
+</dd>
+<dt id="term-namespace">namespace</dt><dd><p>Tenant’s configuration objects are grouped under namespaces. Namespaces can be thought of as administrative domains. All the objects of the same kind need to have unique names in a given namespace. Namespace themselves must be unique within a tenant. In this document namespace will be referred as &lt;tenant&gt;/&lt;namespace&gt;, which will be globally unique.</p>
+</dd>
+<dt id="term-site">site</dt><dd><p>Site is a physical or cloud location where F5 Nodes are deployed. Site can be a public cloud location like AWS VPC, Azure VNET, GCP VPC, physical datacenter, or an edge location like manufacturing Site, factory, retail store, restaurant, charging stations, robots, etc. Even though F5® Distributed Cloud’s Regional Edges are available as Sites for F5® Distributed Cloud Mesh (Mesh) or F5® Distributed Cloud App Stack (App Stack) services, they are not marked in F5® Distributed Cloud Console (Console) or APIs as “customer Sites”.</p>
+</dd>
+<dt id="term-regional-edge">regional-edge</dt><dd><p>Regional Edges (RE) in F5 Distributed Cloud Global Infrastructure - F5 Distributed Cloud points of presence with their own highly meshed backbone are used to provide customer services (eg. Mesh or App Stack). These points of presence are also used to connect multiple customer Sites to each other. These REs can also be used to expose customer services to the public internet. These RE sites can also be used to run customer applications so that they are closer to end consumers on public Internet or their distributed application locations.</p>
+</dd>
+</dl>
+
+
+     </div>
+
+<!--
+    
+-->
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="_static/js/index.js"></script>
+  <script src="_static/js/jquery.appear.js"></script>
+  <script src="_static/js/printThis.js"></script>
+  <script src="_static/js/bootstrap.min.js"></script>
+  <script src="_static/js/clouddocs.js"></script>
+  <script src="_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>

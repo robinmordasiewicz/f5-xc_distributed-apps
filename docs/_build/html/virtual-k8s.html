@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Managed Namespace &#8212; Infrastructure As Code</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-toolbox-code.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/f5.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/f5-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/CoveoFullSearch.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/21fb8a09c3.css" type="text/css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Distributed Apps" href="index.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+
+  <div class="titlebar">
+              <!-- custom breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html" class=breadcrumbanchor>Infrastructure</a>
+
+        </div>
+
+        <!-- end custom breadcrumb -->
+      
+              <!-- custom navigation -->
+
+        <div class="navigation-container">
+
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="index.html" title="Distributed Apps" accesskey="p" class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-outline-primary reference external navigation-button"><i class="fa-regular fa-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+       </div>
+     </div>
+    
+
+        </div>
+        <!-- end custom navigation -->
+      
+  </div>
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+<!--
+      
+<div id="searchbox" role="search">
+  <form class="search" action="search.html" method="get">
+    <input type="text" class="search" name="q" placeholder=" Search..." />
+    <button type="submit" class="btn btn-info navbar-btn"><i class="fa fa-search"></i></button>
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+      
+-->
+      <nav class="nav-sidebartoc">
+        <hr>
+        <span class="nav-sidebartoc">
+            <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Managed Namespace</a></li>
+</ul>
+
+        </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <!--<button type="button" id="export-pdf" class="btn btn-link right">PDF</button>-->
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <section id="managed-namespace">
+<h1>Managed Namespace</h1>
+<p>Configure a virtual k8s cluster, deploy and scale a containerized <a class="hxr-hoverxref hxr-tooltip reference internal" href="glossary.html#term-workload"><span class="xref std std-term">workload</span></a> from a private <a class="hxr-hoverxref hxr-tooltip reference internal" href="glossary.html#term-registry"><span class="xref std std-term">registry</span></a>.</p>
+<p>A service with one or more containers with configurable number of replicas may be deployed on a selection of Regional Edge sites or customer sites and advertised within the cluster where is it deployed, on the Internet, or on other sites using TCP or HTTP or HTTPS load balancer.</p>
+<p><a class="reference external" href="https://github.com/richardjortega/ks8-blue-green">https://github.com/richardjortega/ks8-blue-green</a></p>
+<p><a class="reference external" href="https://docs.cloud.f5.com/docs/ves-concepts/dist-app-mgmt">F5 Distributed Cloud documentation</a></p>
+<div class="contents local topic" id="the-following-topics-will-be-covered-in-this-lab">
+<p class="topic-title">The following topics will be covered in this lab.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#create-virtual-k8s" id="id1">Create Virtual k8s</a></p></li>
+<li><p><a class="reference internal" href="#advertise-on-the-internet" id="id2">Advertise on the Internet</a></p></li>
+<li><p><a class="reference internal" href="#scale-deployment" id="id3">Scale Deployment</a></p></li>
+<li><p><a class="reference internal" href="#view-results-with-kubectl" id="id4">View Results with kubectl</a></p></li>
+</ul>
+</div>
+<section id="create-virtual-k8s">
+<h2>Create Virtual k8s</h2>
+<details class="summary-step-1">
+<summary>Step 1</summary><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-VUk=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-VUk=" name="VUk=" role="tab" tabindex="0">UI</button><button aria-controls="panel-0-dmVzY3Rs" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-dmVzY3Rs" name="dmVzY3Rs" role="tab" tabindex="-1">vesctl</button></div><div aria-labelledby="tab-0-VUk=" class="sphinx-tabs-panel group-tab" id="panel-0-VUk=" name="VUk=" role="tabpanel" tabindex="0"><ol class="arabic">
+<li><p>Click <span class="menuselection">Applications ‣ Virtual K8s</span>, and then click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Add Virtual K8s</span></p>
+<img alt="_images/distributedappclickaddvirtualk8s.png" class="no-scaled-link" src="_images/distributedappclickaddvirtualk8s.png" style="width: 100%;" />
+</li>
+<li><p><strong>Name</strong> the Virtual K8s object, then under <span class="guilabel">Virtual Sites</span> click <img alt="add-item" class="no-scaled-link" src="_images/add-item.png" style="height: 24px;" />, select <strong>shared/agility-k8s-vsite</strong>, and click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Save and Exit</span></p>
+<img alt="_images/distributedappclickvirtualk8ssettings2.png" class="no-scaled-link" src="_images/distributedappclickvirtualk8ssettings2.png" style="width: 100%;" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Virtual K8s “<img alt="create-in-progress" class="no-scaled-link" src="_images/create-in-progress.png" style="height: 16px;" />” may take five or more minutes to complete. <span class="fa fa-coffee"></span></p>
+</div>
+<img alt="_images/distributedappclickvirtualk8screate-in-progress.png" class="no-scaled-link" src="_images/distributedappclickvirtualk8screate-in-progress.png" style="width: 100%;" />
+</li>
+</ol>
+</div><div aria-labelledby="tab-0-dmVzY3Rs" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-dmVzY3Rs" name="dmVzY3Rs" role="tabpanel" tabindex="0"><p><code class="file docutils literal notranslate"><span class="pre">virtual_k8s.json</span></code></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;virtual-k8s&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;namespace&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;labels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;disable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;spec&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;vsite_refs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;virtual_site&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;tenant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ves-io&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shared&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ves-io-all-res&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>vesctl configuration create virtual_k8s -i virtual_k8s.json
+</pre></div>
+</div>
+</div></div>
+</details><section id="deploy-workload">
+<h3>Deploy Workload</h3>
+<details class="summary-step-2">
+<summary>Step 2</summary><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-VUk=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-VUk=" name="VUk=" role="tab" tabindex="0">UI</button><button aria-controls="panel-1-dmVzY3Rs" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-dmVzY3Rs" name="dmVzY3Rs" role="tab" tabindex="-1">vesctl</button></div><div aria-labelledby="tab-1-VUk=" class="sphinx-tabs-panel group-tab" id="panel-1-VUk=" name="VUk=" role="tabpanel" tabindex="0"><ol class="arabic">
+<li><p>When Virtual K8s shows as “<img alt="ready" class="no-scaled-link" src="_images/ready.png" style="height: 16px;" />”, click the virtual site to display details.</p>
+<img alt="_images/distributedappclickvirtualk8sready.png" class="no-scaled-link" src="_images/distributedappclickvirtualk8sready.png" style="width: 100%;" />
+</li>
+<li><p>Click <span class="guilabel">Workloads</span> in the properties tab, and then click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Add VK8s Workload</span></p>
+<img alt="_images/apps-vk8s-add-vk8s-workload.png" class="no-scaled-link" src="_images/apps-vk8s-add-vk8s-workload.png" style="width: 100%;" />
+</li>
+</ol>
+</div><div aria-labelledby="tab-1-dmVzY3Rs" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-dmVzY3Rs" name="dmVzY3Rs" role="tabpanel" tabindex="0"><p><code class="file docutils literal notranslate"><span class="pre">virtual_k8s.json</span></code></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;virtual-k8s&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;namespace&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;labels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;annotations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;disable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;spec&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;vsite_refs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;virtual_site&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;tenant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ves-io&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shared&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ves-io-all-res&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;disabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>vesctl configuration create virtual_k8s -i virtual_k8s.json
+</pre></div>
+</div>
+</div></div>
+</details></section>
+<section id="container-service">
+<h3>Container Service</h3>
+<ol class="arabic">
+<li><p>Provide a <span class="guilabel">Name</span>, then under <span class="guilabel">Select Type of Workload</span> select <strong>Service</strong>, and click <span class="guilabel">Configure</span>.</p>
+<img alt="_images/vk8s-workload-create-workload-configure.png" class="no-scaled-link" src="_images/vk8s-workload-create-workload-configure.png" style="width: 100%;" />
+</li>
+<li><p>In <span class="guilabel">Containers</span> section click <img alt="add-item" class="no-scaled-link" src="_images/add-item.png" style="height: 24px;" /></p>
+<img alt="_images/6add_container.png" class="no-scaled-link" src="_images/6add_container.png" style="width: 100%;" />
+</li>
+<li><p>Complete the <span class="guilabel">Container Configuration</span> section by providing a <strong>Name</strong> and details for which image to use, then <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Add Item</span></p>
+<ul class="simple">
+<li><p><strong>Name</strong>: vk8s-container</p></li>
+<li><p><strong>Image Name</strong>: coleman.azurecr.io/f5xcdemoapp</p></li>
+<li><p><strong>Container Registry</strong>: Private Registry</p></li>
+<li><p><strong>Private Registry</strong>: shared/azure-registry</p></li>
+</ul>
+<img alt="_images/7container_config.png" class="no-scaled-link" src="_images/7container_config.png" style="width: 100%;" />
+</li>
+</ol>
+</section>
+<section id="associate-to-virtual-site">
+<h3>Associate to Virtual Site</h3>
+<ol class="arabic">
+<li><p>Within the <span class="guilabel">Deploy Options</span> section, set <span class="guilabel">Where to Deploy the workload</span> to <strong>Customer Virtual Sites</strong>, then click <strong>Configure</strong>.</p>
+<img alt="_images/8deploy_options.png" class="no-scaled-link" src="_images/8deploy_options.png" style="width: 100%;" />
+</li>
+<li><p>Select <strong>shared/agility-k8s-vsite</strong> under <span class="guilabel">List of Virtual Sites to Deploy</span>, then <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Apply</span></p>
+<img alt="_images/9select_customer_site.png" class="no-scaled-link" src="_images/9select_customer_site.png" style="width: 100%;" />
+</li>
+</ol>
+</section>
+<section id="service-advertisement">
+<h3>Service Advertisement</h3>
+<ol class="arabic">
+<li><p>Within the <span class="guilabel">Advertise Options</span> section, set <span class="guilabel">Options to Advertise the Workload</span> to <strong>Advertise in Cluster</strong>, then select <strong>Configure</strong>.</p>
+<img alt="_images/10select_advertise_options.png" class="no-scaled-link" src="_images/10select_advertise_options.png" style="width: 100%;" />
+</li>
+<li><p>Set <span class="guilabel">Select Port to Advertise</span> to <strong>3000</strong>, select <span class="guilabel">Application Protocol</span> to <strong>HTTP</strong>, and click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Apply</span></p>
+<img alt="_images/11set_advertise_port.png" class="no-scaled-link" src="_images/11set_advertise_port.png" style="width: 100%;" />
+</li>
+<li><p>The <span class="guilabel">Deploy Options</span> dialogue is dismissed, and click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Apply</span> to complete the <span class="guilabel">Containers</span> dialogue.</p>
+<img alt="_images/apply-vk8s-workload.png" class="no-scaled-link" src="_images/apply-vk8s-workload.png" style="width: 100%;" />
+</li>
+<li><p>The <span class="guilabel">Containers</span> dialogue is now dismissed, to finalize the <span class="guilabel">Workload</span>, Click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Save and Exit</span></p>
+<img alt="_images/create-workload-save-and-exit.png" class="no-scaled-link" src="_images/create-workload-save-and-exit.png" style="width: 100%;" />
+</li>
+<li><p>The workload has been added. The vsite that vk8s is deployed on consists of 3 sites, so there are 3 pods in total.</p>
+<img alt="_images/12verify_3_workload_sites_pods.png" class="no-scaled-link" src="_images/12verify_3_workload_sites_pods.png" style="width: 100%;" />
+</li>
+</ol>
+</section>
+</section>
+<section id="advertise-on-the-internet">
+<h2>Advertise on the Internet</h2>
+<p>In order to view the kubernetes workload with a browser, create an HTTP-LB to advertise the site on the internet.</p>
+<section id="create-origin-pool">
+<h3>Create Origin Pool</h3>
+<ol class="arabic">
+<li><p>Navigate the left-side menu to <span class="menuselection">Manage ‣ Load Balancers ‣ Origin Pools</span>, then click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Add Origin Pool</span>.</p>
+<img alt="_images/m-origin-pool.png" class="no-scaled-link" src="_images/m-origin-pool.png" style="width: 100%;" />
+</li>
+<li><p>Enter a <strong>Name</strong>, set the <span class="guilabel">Port</span> value to <em>3000</em>, and under <span class="guilabel">Origin Servers</span> click <img alt="add-item" class="no-scaled-link" src="_images/add-item.png" style="height: 24px;" /></p>
+<img alt="_images/m-origin-pool-name.png" class="no-scaled-link" src="_images/m-origin-pool-name.png" style="width: 100%;" />
+</li>
+<li><p>Complete the <span class="guilabel">Origin Server</span> section with the values below, click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Apply</span>, and <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Save and Exit</span> on subsequent screen to complete the origin pool creation.</p>
+<ul>
+<li><p><span class="guilabel">Select Type of Origin Server</span>: <strong>K8s Service Name of Origin Server on given Sites</strong></p></li>
+<li><p><span class="guilabel">Service</span>: <strong>Service Name</strong></p></li>
+<li><dl>
+<dt><span class="guilabel">Service Name</span>: <strong>vk8s-workload.&lt;namespace&gt;</strong></dt><dd><ul>
+<li><div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Supply the configured workload name from previous steps along with the student namespace.</p>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><span class="guilabel">Site or Virtual Site</span>: <strong>Virtual Site</strong></p></li>
+<li><p><span class="guilabel">Virtual Site</span>: <strong>shared/agility-k8s-vsite</strong></p></li>
+<li><p><span class="guilabel">Select Network on the site</span>: <strong>vK8s Networks on Site</strong></p></li>
+</ul>
+<img alt="_images/m3-add-origin-server.png" class="no-scaled-link" src="_images/m3-add-origin-server.png" style="width: 100%;" />
+</li>
+</ol>
+</section>
+<section id="create-http-load-balancer">
+<h3>Create HTTP Load-Balancer</h3>
+<ol class="arabic">
+<li><p>Navigate the left-side menu to <span class="menuselection">Manage ‣ Load Balancers ‣ HTTP Load Balancers</span>, then click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Add HTTP Load Balancer</span>.</p>
+<img alt="_images/m-add-http.png" class="no-scaled-link" src="_images/m-add-http.png" style="width: 100%;" />
+</li>
+<li><p>Add the following values, and click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Save and Exit</span></p>
+<ul class="simple">
+<li><p><span class="guilabel">Name</span>: app-http-lb</p></li>
+<li><p><span class="guilabel">Domains and LB Type</span>: Use the assigned {namespace}.lab-app.f5demos.com</p></li>
+<li><p><span class="guilabel">Load Balancer Type</span>: <strong>HTTP</strong></p></li>
+<li><p><span class="guilabel">Automatically Manage DNS Records</span>: Make sure this is checked</p></li>
+<li><p><span class="guilabel">Origins</span>: Click <img alt="add-item" class="no-scaled-link" src="_images/add-item.png" style="height: 24px;" />, and select <strong>app-origin-pool</strong></p></li>
+</ul>
+<img alt="_images/m-http-name.png" class="no-scaled-link" src="_images/m-http-name.png" style="width: 100%;" />
+</li>
+<li><p>It may take a minute <span class="fa fa-coffee"></span> for the <span class="guilabel">DNS Info</span> to display <strong>VIRTUAL_HOST_READY</strong></p>
+<img alt="_images/m-http-status.png" class="no-scaled-link" src="_images/m-http-status.png" style="width: 100%;" />
+</li>
+<li><p>Open a browser tab and navigate to the configured DNS name <cite>http://busy-parrot.lab-app.f5demos.com/</cite>. Refresh your browser a few times and notice what happens to the country name.</p>
+<img alt="_images/m-http-page.png" class="no-scaled-link" src="_images/m-http-page.png" style="width: 100%;" />
+</li>
+</ol>
+</section>
+</section>
+<section id="scale-deployment">
+<h2>Scale Deployment</h2>
+<p>Modify Virtual K8s Deployment to Scale Replicas.</p>
+<section id="edit-json">
+<h3>Edit JSON</h3>
+<ol class="arabic">
+<li><p>Navigate the left-side menu to <span class="menuselection">Applications ‣ Virtual K8s ‣ virtual-k8s</span>, click <span class="guilabel">Deployments</span>, <span class="guilabel">Actions</span>, <img alt="three-dots" class="no-scaled-link" src="_images/three-dots.png" style="height: 28px;" /> then click <span class="guilabel">Edit</span>.</p>
+<img alt="_images/14edit_deployment.png" class="no-scaled-link" src="_images/14edit_deployment.png" style="width: 100%;" />
+</li>
+<li><p>Enable <img alt="edit-mode" class="no-scaled-link" src="_images/edit-mode.png" style="height: 24px;" />, and expand the <code class="docutils literal notranslate"><span class="pre">spec</span></code> section by clicking <img alt="out-arrows" class="no-scaled-link" src="_images/out-arrows.png" style="height: 26px;" /></p>
+<img alt="_images/15modify_deployment_spec.png" class="no-scaled-link" src="_images/15modify_deployment_spec.png" style="width: 100%;" />
+</li>
+<li><p>Change <strong>replicas: 1</strong> to <strong>replicas: 3</strong> and click <span class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary">Save</span></p>
+<img alt="_images/set-three-replicas-save.png" class="no-scaled-link" src="_images/set-three-replicas-save.png" style="width: 100%;" />
+</li>
+<li><p>After a few moments, the number of <strong>Running Pods</strong> will increase to 9.</p>
+<img alt="_images/16review_scaled_deployment.png" class="no-scaled-link" src="_images/16review_scaled_deployment.png" style="width: 100%;" />
+</li>
+</ol>
+</section>
+</section>
+<section id="view-results-with-kubectl">
+<h2>View Results with kubectl</h2>
+<section id="install-kubectl">
+<h3>Install kubectl</h3>
+<p>Insert instructions to install kubectl</p>
+</section>
+<section id="download-kubeconfig">
+<h3>Download kubeconfig</h3>
+<ol class="arabic">
+<li><p>Navigate to <span class="menuselection">Applications ‣ Virtual K8s</span>, click <img alt="three-dots" class="no-scaled-link" src="_images/three-dots.png" style="height: 28px;" />, and then click <img alt="download-kubeconfig-button" class="no-scaled-link" src="_images/download-kubeconfig-buton.png" style="height: 20px;" /></p>
+<img alt="_images/distributedappclickvirtualk8kubeconfig.png" class="no-scaled-link" src="_images/distributedappclickvirtualk8kubeconfig.png" style="width: 100%;" />
+</li>
+<li><p><a class="reference external" href="https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/">Follow the kubernetes.io guide to install the kubeconfig</a></p></li>
+</ol>
+</section>
+<section id="kubectl-commands">
+<h3>kubectl commands</h3>
+<p>Run the following commands and view the vk8s configuration.</p>
+<p><strong>View Nodes</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>kubectl get nodes
+<span class="go">NAME                                                 STATUS   ROLES        AGE   VERSION</span>
+<span class="go">agility-vpc-site-one-agility-vpc-site-one-1w2h       Ready    ves-master   28s   v1.21.7-vesdev</span>
+<span class="go">agility-vpc-site-three-agility-vpc-site-three-xn79   Ready    ves-master   32s   v1.21.7-vesdev</span>
+<span class="go">agility-vpc-site-two-agility-vpc-site-two-j735       Ready    ves-master   33s   v1.21.7-vesdev</span>
+</pre></div>
+</div>
+<p><strong>View pods</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>kubectl get pods
+<span class="go">NAME                             READY   STATUS    RESTARTS   AGE</span>
+<span class="go">vk8s-workload-574ffc5cdd-sb5bm   2/2     Running   0          2m40s</span>
+<span class="go">vk8s-workload-64f8f87976-kh8zz   2/2     Running   0          2m37s</span>
+<span class="go">vk8s-workload-67b54bd74b-bqdx8   2/2     Running   0          2m41s</span>
+<span class="gp">$ </span>kubectl describe pod &lt;podname&gt;
+</pre></div>
+</div>
+<p><strong>View deployment</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>kubectl get deployment vk8s-workload
+<span class="go">NAME            READY   UP-TO-DATE   AVAILABLE   AGE</span>
+<span class="go">vk8s-workload   3/1     3            3           4m43s</span>
+</pre></div>
+</div>
+<p><strong>View service</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>kubectl get svc vk8s-workload
+<span class="go">NAME            TYPE        CLUSTER-IP        EXTERNAL-IP   PORT(S)    AGE</span>
+<span class="go">vk8s-workload   ClusterIP   192.168.167.169   &lt;none&gt;        3000/TCP   8m33s</span>
+</pre></div>
+</div>
+<p><strong>View all resources in the namespace</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>kubectl get all
+<span class="go">NAME                                 READY   STATUS    RESTARTS   AGE</span>
+<span class="go">pod/vk8s-workload-574ffc5cdd-sb5bm   2/2     Running   0          9m18s</span>
+<span class="go">pod/vk8s-workload-64f8f87976-kh8zz   2/2     Running   0          9m15s</span>
+<span class="go">pod/vk8s-workload-67b54bd74b-bqdx8   2/2     Running   0          9m19s</span>
+
+<span class="go">NAME                    TYPE        CLUSTER-IP        EXTERNAL-IP   PORT(S)    AGE</span>
+<span class="go">service/vk8s-workload   ClusterIP   192.168.167.169   &lt;none&gt;        3000/TCP   9m21s</span>
+
+<span class="go">NAME                            READY   UP-TO-DATE   AVAILABLE   AGE</span>
+<span class="go">deployment.apps/vk8s-workload   3/1     3            3           9m22s</span>
+
+<span class="go">NAME                                       DESIRED   CURRENT   READY   AGE</span>
+<span class="go">replicaset.apps/vk8s-workload-574ffc5cdd   1         1         1       9m22s</span>
+<span class="go">replicaset.apps/vk8s-workload-64f8f87976   1         1         1       9m22s</span>
+<span class="go">replicaset.apps/vk8s-workload-67b54bd74b   1         1         1       9m22s</span>
+</pre></div>
+</div>
+<p><strong>View the output of the deployment in yaml format</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>kubectl get deployment -o yaml
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+     </div>
+
+<!--
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="index.html" title="Distributed Apps" accesskey="p" class="btn btn-primary left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+     </div>
+     </div>
+    
+-->
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="_static/js/index.js"></script>
+  <script src="_static/js/jquery.appear.js"></script>
+  <script src="_static/js/printThis.js"></script>
+  <script src="_static/js/bootstrap.min.js"></script>
+  <script src="_static/js/clouddocs.js"></script>
+  <script src="_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>
