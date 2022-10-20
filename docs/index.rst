@@ -4,7 +4,6 @@ Distributed Apps
 ================
 
 .. toctree::
-   :hidden:
 
 .. topic:: Distributed Applications
 
