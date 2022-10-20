@@ -3,9 +3,12 @@
 Distributed Apps
 ================
 
+.. toctree::
+   :hidden:
+
 .. topic:: Distributed Applications
 
-    Deploy and Advertise a container running inside a managed namespace
+   Deploy and Advertise a container running inside a managed namespace
 
 Configure a virtual k8s cluster, deploy and scale a containerized :term:`workload` from a private :term:`registry`.
 
